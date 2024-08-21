@@ -12,6 +12,7 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "esModuleInterop": true,
+    "allowImportingTsExtensions": true, // TODO: проверить, нужно ли для тестировки
   },
 
 }
