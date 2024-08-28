@@ -32,4 +32,3 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan $HOST >> ~/.ssh/known_hosts
           rsync -avz --delete ./dist/ $USER@$HOST:$DEPLOY_PATH
-          ssh $USER@$HOST "cd $DEPLOY_PATH && npm install --production && pm2 reload all"
