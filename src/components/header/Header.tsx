@@ -4,7 +4,9 @@ const pages = ['О нас', 'Продукты', 'Тутуту'];
 
 const AppBarStyles =  {
     background: "white",
-    shadows: '0'
+    boxShadow: '0',
+    display: 'flex',
+    alignItems: 'center',
 };
 
 export const Header = () => {
@@ -16,17 +18,22 @@ export const Header = () => {
 
                 <Container>
                     <Toolbar disableGutters>
-                        <Box>
-                            <Icon sx={{width:'100px', height:'100%'}}>
+                        <Box sx={{display:'flex', alignItems: 'center'}}>
+                            <Icon sx={{width:'100px', height:'auto'}}>
                                 <img src="/minoria_full_logo.svg" alt="minoria-logo" style={{display:'flex', width: '100%'}}/>
                             </Icon>
                         </Box>
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
                             {pages.map((page) => (
-                                <Button
+                                <Button variant="contained"
                                     key={page}
+                                    sx={{
 
-                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                        margin: '0 10px',
+                                        height: '100%',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                    }}
                                 >
                                     {page}
                                 </Button>
@@ -34,7 +41,6 @@ export const Header = () => {
                         </Box>
                     </Toolbar>
                 </Container>
-
             </AppBar>
 
     );

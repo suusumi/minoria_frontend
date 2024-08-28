@@ -8,12 +8,14 @@ import {Box, FormControlLabel, FormGroup, Switch, ThemeProvider} from "@mui/mate
 import {darkTheme, lightTheme} from "./theme/theme.ts";
 import {useDispatch, useSelector} from "react-redux";
 import {toggleTheme} from "./redux/theme/themeSlice.ts";
+import {RootState} from "./redux/store.ts";
+
 
 const queryClient = new QueryClient();
 
 function App() {
     // Получить тему из стора
-    const theme = useSelector((state) => state.theme)
+    const theme = useSelector((state:RootState) => state.theme)
 
     // Диспатч для переключателя
     const dispatch = useDispatch();

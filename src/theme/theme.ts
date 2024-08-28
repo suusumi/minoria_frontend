@@ -1,22 +1,11 @@
 import {createTheme} from "@mui/material";
-import {purple, red} from "@mui/material/colors";
-
-// const theme = createTheme({
-//     status: {
-//         danger: red[500],
-//     },
-//     palette: {
-//         primary: {
-//             main: purple[500],
-//         }
-//     }
-// })
-
-// export default theme;
 
 export const lightTheme = createTheme({
     palette: {
         mode: "light",
+        primary: {
+            main: '#288e81',
+        },
         background: {
             paper: "#f2f2f2",
         },
