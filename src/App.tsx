@@ -4,7 +4,7 @@ import {Header} from "./components/header/Header.tsx";
 
 import {QueryClient, QueryClientProvider} from "react-query";
 import {RegistrationForm2} from "./components/registration/RegistrationForm2.tsx";
-import {Box, FormControlLabel, FormGroup, Switch, ThemeProvider} from "@mui/material";
+import {Box, CssBaseline, FormControlLabel, FormGroup, Switch, ThemeProvider} from "@mui/material";
 import {darkTheme, lightTheme} from "./theme/theme.ts";
 import {useDispatch, useSelector} from "react-redux";
 import {toggleTheme} from "./redux/theme/themeSlice.ts";
@@ -47,6 +47,7 @@ function App() {
     return (
         <QueryClientProvider client={queryClient}>
             <ThemeProvider theme={theme.darkTheme ? darkTheme : lightTheme}>
+                <CssBaseline />
                 <Header/>
                 <Box sx={{marginTop:'200px'}}>
                     <ToggleSwitch />

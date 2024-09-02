@@ -3,8 +3,8 @@ import {AppBar, Box, Button, Container, Icon, Toolbar} from "@mui/material";
 const pages = ['О нас', 'Продукты', 'Тутуту'];
 
 const AppBarStyles =  {
-    background: "white",
-    boxShadow: '0',
+
+    // boxShadow: '0',
     display: 'flex',
     alignItems: 'center',
 };
@@ -25,10 +25,9 @@ export const Header = () => {
                         </Box>
                         <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
                             {pages.map((page) => (
-                                <Button variant="contained"
+                                <Button variant="text"
                                     key={page}
                                     sx={{
-
                                         margin: '0 10px',
                                         height: '100%',
                                         display: 'flex',
